@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>My Blog</h1>
+    <div>
+        <a href="?tag">All</a>
+        <a href="?tag=life">life</a>
+        <a href="?tag=tech">tech</a>
+    </div>
+    {% for blog in blogs %}
+        <div><h2>{{ blog.title }}</h2></div>
+        <div>
+            <p><span>{{ blog.publish }}</span><span style="margin-left: 20px">{{ blog.tag }}</span></p>
+        </div>
+        <div>
+            <p>{{ blog.article }}</p>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>
